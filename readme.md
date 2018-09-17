@@ -4,16 +4,16 @@
 <h2 align="center">PAYJS Wechat Payment Laravel Package</h2>
 <p align="center">
   
-   <a href="https://packagist.org/packages/xhat/payjs">
-      <img src="https://poser.pugx.org/xhat/payjs/v/stable.png" alt="Latest Stable Version">
+   <a href="https://packagist.org/packages/xhat/payjs-laravel">
+      <img src="https://poser.pugx.org/xhat/payjs-laravel/v/stable.png" alt="Latest Stable Version">
   </a> 
   
-  <a href="https://packagist.org/packages/xhat/payjs">
-      <img src="https://poser.pugx.org/xhat/payjs/downloads.png" alt="Total Downloads">
+  <a href="https://packagist.org/packages/xhat/payjs-laravel">
+      <img src="https://poser.pugx.org/xhat/payjs-laravel/downloads.png" alt="Total Downloads">
   </a> 
   
-  <a href="https://packagist.org/packages/xhat/payjs">
-    <img src="https://poser.pugx.org/xhat/payjs/license.png" alt="License">
+  <a href="https://packagist.org/packages/xhat/payjs-laravel">
+    <img src="https://poser.pugx.org/xhat/payjs-laravel/license.png" alt="License">
   </a>
 </p>
 
