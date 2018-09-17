@@ -22,6 +22,9 @@
 
 PAYJS 针对个人主体提供微信支付接入能力，是经过检验的正规、安全、可靠的微信支付个人开发接口
 
+其它版本: [PAYJS 通用开发包](https://github.com/xhat/payjs)
+
+
 ## 安装
 
 通过 Composer 安装
