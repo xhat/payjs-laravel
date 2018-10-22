@@ -62,13 +62,13 @@ use Xhat\Payjs\Facades\Payjs;
 ```php
 // 构造订单基础信息
 $data = [
-    'body' => '订单测试',                        // 订单标题
-    'total_fee' => 2,                           // 订单标题
-    'out_trade_no' => time(),                   // 订单号
-    'attach' => 'test_order_attach',            // 订单附加信息(可选参数)
-    'notify_url' => 'https://www.baidu.com',    // 异步通知地址(可选参数)
+    'body' => '订单测试',                                // 订单标题
+    'total_fee' => 2,                                   // 订单标题
+    'out_trade_no' => time(),                           // 订单号
+    'attach' => 'test_order_attach',                    // 订单附加信息(可选参数)
+    'notify_url' => 'https://www.baidu.com/notify',     // 异步通知地址(可选参数)
 ];
-return Payjs::native();
+return Payjs::native($data);
 ```
 
 - 收银台模式支付（直接在微信浏览器打开）
@@ -76,12 +76,12 @@ return Payjs::native();
 ```php
 // 构造订单基础信息
 $data = [
-    'body' => '订单测试',                         // 订单标题
-    'total_fee' => 2,                            // 订单金额
-    'out_trade_no' => time(),                    // 订单号
-    'attach' => 'test_order_attach',             // 订单附加信息(可选参数)
-    'notify_url' => 'https://www.baidu.com',     // 异步通知地址(可选参数)
-    'callback_url' => 'https://www.baidu.com',   // 支付后前端跳转地址(可选参数)
+    'body' => '订单测试',                                    // 订单标题
+    'total_fee' => 2,                                       // 订单金额
+    'out_trade_no' => time(),                               // 订单号
+    'attach' => 'test_order_attach',                        // 订单附加信息(可选参数)
+    'notify_url' => 'https://www.baidu.com/notify',         // 异步通知地址(可选参数)
+    'callback_url' => 'https://www.baidu.com/callback',     // 支付后前端跳转地址(可选参数)
 ];
 $url = Payjs::cashier($data);
 return redirect($url);
