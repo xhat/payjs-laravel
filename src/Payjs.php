@@ -29,6 +29,8 @@ class Payjs
         $this->api_url_user    = $api_url . 'user';
         $this->api_url_info    = $api_url . 'info';
         $this->api_url_bank    = $api_url . 'bank';
+        $this->api_url_jsapi   = $api_url . 'jsapi';
+        $this->api_url_facepay = $api_url . 'facepay';
     }
 
     // 扫码支付
@@ -47,11 +49,25 @@ class Payjs
         return $url;
     }
 
+    // JASAPI
+    public function jsapi(array $data)
+    {
+        $this->url = $this->api_url_jsapi;
+        return $this->post($data);
+    }
+
     // 退款
     public function refund($payjs_order_id)
     {
         $this->url = $this->api_url_refund;
         $data      = ['payjs_order_id' => $payjs_order_id];
+        return $this->post($data);
+    }
+
+    // 人脸支付
+    public function facepay(array $data)
+    {
+        $this->url = $this->api_url_facepay;
         return $this->post($data);
     }
 
