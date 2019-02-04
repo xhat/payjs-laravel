@@ -99,8 +99,7 @@ $data = [
     'openid' => 'xxxxxxxxxxxxxxxxx',                        // 订单附加信息(可选参数)
     'notify_url' => 'https://www.baidu.com/notify',         // 异步通知地址(可选参数)
 ];
-$url = Payjs::jsapi($data);
-return redirect($url);
+return Payjs::jsapi($data);
 ```
 
 - 查询订单
