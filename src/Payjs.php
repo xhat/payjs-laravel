@@ -135,7 +135,7 @@ class Payjs
     // 校验数据签名
     public function checkSign($data)
     {
-        $in_sign = $data['sign'];
+        $in_sign = data_get($data, 'sign');
         unset($data['sign']);
         $data = array_filter($data);
         ksort($data);
