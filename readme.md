@@ -24,6 +24,8 @@ PAYJS 针对个人主体提供微信支付接入能力，是经过检验的正�
 
 其它版本: [PAYJS 通用开发包](https://github.com/xhat/payjs)
 
+支持Laravel 5.x、Laravel 6.x
+
 
 ## 安装
 
