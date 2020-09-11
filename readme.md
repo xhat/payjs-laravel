@@ -104,6 +104,31 @@ $data = [
 return Payjs::jsapi($data);
 ```
 
+- H5支付
+
+```php
+// 构造订单基础信息
+$data = [
+    'body' => '订单测试',                                    // 订单标题
+    'total_fee' => 2,                                       // 订单金额
+    'out_trade_no' => time(),                               // 订单号
+    'attach' => 'test_order_attach',                        // 订单附加信息(可选参数)
+    'notify_url' => 'https://www.baidu.com/notify',         // 异步通知地址(可选参数)
+    'callback_url' => 'https://www.baidu.com',              // 前端跳转地址(可选参数)
+];
+return Payjs::mweb($data);
+```
+
+- 投诉查询
+
+```php
+// 构造订单基础信息
+$data = [
+    'mchid' => '123123',                                    // 商户号
+];
+return Payjs::complaint($data);
+```
+
 - 查询订单
 
 ```php
@@ -161,6 +186,9 @@ Log::info($notify_info);
 ```
 
 ## 更新日志
+Version 1.5.0
+增加投诉API、H5支付API
+
 Version 1.4
 修正空值参数的过滤问题
 

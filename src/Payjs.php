@@ -14,6 +14,10 @@ class Payjs
     private $api_url_user;
     private $api_url_info;
     private $api_url_bank;
+    private $api_url_jsapi;
+    private $api_url_facepay;
+    private $api_url_complaint;
+    private $api_url_mweb;
 
     public function __construct()
     {
@@ -21,16 +25,18 @@ class Payjs
         $this->key   = config('payjs.key');
         $api_url     = config('payjs.api_url');
 
-        $this->api_url_native  = $api_url . 'native';
-        $this->api_url_cashier = $api_url . 'cashier';
-        $this->api_url_refund  = $api_url . 'refund';
-        $this->api_url_close   = $api_url . 'close';
-        $this->api_url_check   = $api_url . 'check';
-        $this->api_url_user    = $api_url . 'user';
-        $this->api_url_info    = $api_url . 'info';
-        $this->api_url_bank    = $api_url . 'bank';
-        $this->api_url_jsapi   = $api_url . 'jsapi';
-        $this->api_url_facepay = $api_url . 'facepay';
+        $this->api_url_native    = $api_url . 'native';
+        $this->api_url_cashier   = $api_url . 'cashier';
+        $this->api_url_refund    = $api_url . 'refund';
+        $this->api_url_close     = $api_url . 'close';
+        $this->api_url_check     = $api_url . 'check';
+        $this->api_url_user      = $api_url . 'user';
+        $this->api_url_info      = $api_url . 'info';
+        $this->api_url_bank      = $api_url . 'bank';
+        $this->api_url_jsapi     = $api_url . 'jsapi';
+        $this->api_url_facepay   = $api_url . 'facepay';
+        $this->api_url_complaint = $api_url . 'complaint';
+        $this->api_url_mweb      = $api_url . 'mweb';
     }
 
     // 扫码支付
@@ -68,6 +74,20 @@ class Payjs
     public function facepay(array $data)
     {
         $this->url = $this->api_url_facepay;
+        return $this->post($data);
+    }
+
+    // 投诉订单
+    public function complaint(array $data)
+    {
+        $this->url = $this->api_url_complaint;
+        return $this->post($data);
+    }
+
+    // MWEB(H5) 支付
+    public function mweb(array $data)
+    {
+        $this->url = $this->api_url_mweb;
         return $this->post($data);
     }
 
